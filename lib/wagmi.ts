@@ -3,7 +3,7 @@ import { base, baseSepolia } from "wagmi/chains";
 
 export const wagmiConfig = getDefaultConfig({
   appName: "SIWA Hub",
-  projectId: "siwa-hub-demo",
+  projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID ?? "siwa-hub-demo",
   chains: [base, baseSepolia],
   ssr: true,
 });
